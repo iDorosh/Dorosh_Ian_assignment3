@@ -111,6 +111,7 @@ var rocketSepration = function (rocketTypes){
 console.log ("The launch of the Aries 3 rocket is today. The year is "+ launchYear);
 
 console.log ("The mission has 4 Astronauts")
+
 handleData(json1);
 
 console.log ("To estimate fuel cost we need to know if its windy outside");
