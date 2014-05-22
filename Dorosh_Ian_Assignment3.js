@@ -34,7 +34,7 @@ var windCondition = function() {
 
 
 
-//Bolean Function
+//Boolean Function
 
 var blastOff = function(liftOff) {
 	var countdown;
