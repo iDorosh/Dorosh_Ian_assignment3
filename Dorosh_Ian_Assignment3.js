@@ -22,7 +22,7 @@ var orbit;
 
 var windCondition = function() {
 	
- if (wind = "yes" || "YES" || "Yes"){
+ if (wind == "yes" ||wind == "YES" ||wind == "Yes"){
 	console.log ("Since it is windy fuel cost will increase to " + fuelCost2 + " from " + fuelCost + " to compinsate for the wind.");
 	
 	} 	else {
