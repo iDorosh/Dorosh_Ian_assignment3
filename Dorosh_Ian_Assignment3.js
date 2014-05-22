@@ -13,10 +13,10 @@ var wind;
 var blastOff;
 var liftOff;
 var altitude;
-var finalaltitude;
+var finalAltitude;
 var orbit;
-
 var rocketTypes;
+
 //Functions
 
 //Procedure
@@ -61,8 +61,8 @@ var altitude = function(startAltitude){
 	
 		console.log (startAltitude)
 		
-};  	var finalaltitude = startAltitude;
-		return finalaltitude;
+};  	var finalAltitude = startAltitude;
+		return finalAltitude;
 };
 
 
@@ -95,7 +95,7 @@ var handleData = function () {
 // Array Function
 var rocketSepration = function (rocketTypes){
   	var numberOfRockets = rocketTypes.length
-  	console.log("There are " + numberOfRockets + " rockets that have to seperate during launch.")
+  	console.log("There are " + numberOfRockets + " rockets that have to separate during launch.")
 
   	for(var i = 0; i< numberOfRockets; i++){
 	  	
@@ -134,12 +134,12 @@ console.log ("The altitude starts rising");
 
 console.log ("As soon as the rocket reaches 40000 feet the booster rockets will fall off."); 
 
-var finalaltitude = altitude(10000);
-console.log ("The current altitude is " + finalaltitude);
+var finalAltitude = altitude(10000);
+console.log ("The current altitude is " + finalAltitude);
 
 rocketSepration(["Solid Rocket Booster", "Main Rocket", "Ion Rocket"])
 
-console.log ("All Rocket seperation complete.");
+console.log ("All Rocket separation complete.");
 
 var orbitAchieved = space("17500", "To achieve orbit");
 console.log (orbitAchieved);
