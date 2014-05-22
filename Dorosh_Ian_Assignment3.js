@@ -2,6 +2,34 @@
 // SDI 1405
 // Assinment 3
 
+//Json Data File
+
+var json1 = {
+	"astronauts": [
+		{
+			"Position": "Captain",
+			"name": "James T. Kirk", 
+			"age": 34
+		},
+		{
+			"Position":"Pilot",
+			"name" :"Jack O'Neil",	
+			"age" : 56
+		},  
+		{    
+		    "Position": "Lead Engineer",
+			"name": "Howard Wolowitz",
+			"age" : 34
+		},
+		{
+			"Postion":"Cheif Medical Officer",
+			"name": "Leanard McCoy",
+			"age": 37
+		}
+	];
+};
+
+
 
 //Global Variables
 var launchYear = 2030;
@@ -79,9 +107,15 @@ var space = function(){
 	
 }; 
 
+var handleData = function (json) { 
+	console.log(json);
+};
+
+handleData(json1);
 
 //Main Code
 console.log ("The launch of the Aries 3 rocket is today. The year is "+ launchYear);
+
 
 console.log ("To estimate fuel cost we need to know if its windy outside");
 
