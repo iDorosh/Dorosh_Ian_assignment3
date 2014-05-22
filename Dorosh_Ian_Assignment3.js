@@ -58,9 +58,9 @@ var altitude = function(){
 	
 	for (var startAltitude= 10000; startAltitude < 40000; startAltitude+=10000){
 	
-		console.log ("Altitude is at "+ startAltitude)
+		console.log (startAltitude)
 		
-};  	var finalaltitude = "Altitude is at "+ startAltitude;
+};  	var finalaltitude = startAltitude;
 		return finalaltitude;
 };
 
@@ -100,10 +100,12 @@ var liftOff = blastOff();
 		
 	   };
 
+console.log ("The altitude starts rising");
+
 console.log ("As soon as the rocket reaches 40000 feet the booster rockets will fall off."); 
 
 var finalaltitude = altitude();
-console.log (finalaltitude);
+console.log ("The current altitude is " + finalaltitude);
 
 console.log ("Booster rocket seperation complete.");
 
