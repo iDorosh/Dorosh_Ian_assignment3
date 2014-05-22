@@ -1,26 +1,26 @@
 //Json Data File
 
 var json1 = {
-	"astronauts": [
+	"Astronauts": [
 		{
 			"Position": "Captain",
 			"name": "James T. Kirk", 
-			"age": 34
+			"age": "Age " + 34
 		},
 		{
 			"Position":"Pilot",
 			"name" :"Jack O'Neil",	
-			"age" : 56
+			"age" : "Age "+ 56
 		},  
 		{    
 		    "Position": "Lead Engineer",
 			"name": "Howard Wolowitz",
-			"age" : 34
+			"age" : "Age " + 34
 		},
 		{
 			"Postion":"Cheif Medical Officer",
 			"name": "Leanard McCoy",
-			"age": 37
+			"age": "Age " + 37
 		}
 	]
 };

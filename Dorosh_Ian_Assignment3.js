@@ -16,6 +16,7 @@ var altitude;
 var finalaltitude;
 var orbit;
 
+var rocketTypes = ["Solid Rocket Booster", "Main Rocket", "Ion Rocket"];
 //Functions
 
 //Procedure
@@ -34,7 +35,7 @@ var windCondition = function() {
 
 //Bolean Function
 
-var blastOff = function(blast) {
+var blastOff = function(liftOff) {
 	var countdown;
 	if (launchTime === !true){		
 	countDown = 10
@@ -46,17 +47,17 @@ var blastOff = function(blast) {
 		while (countDown > 0) {
 			console.log (countDown--);
 	
-		};	liftOff = true
+		};	liftOff
 			return liftOff;
 };
 
 
 
 // Number Function
-var altitude = function(){
+var altitude = function(startAltitude){
 	var startAltitude
 	
-	for (var startAltitude= 10000; startAltitude < 40000; startAltitude+=10000){
+	for (var startAltitude; startAltitude < 40000; startAltitude+=10000){
 	
 		console.log (startAltitude)
 		
@@ -67,7 +68,7 @@ var altitude = function(){
 
 
 // String Function
-var space = function(){
+var space = function(escapeVelocity, orbit){
 	var escapeVelocity = "17500";
 	var orbit = "To achieve orbit";
 		if (orbit == "To achieve orbit" && escapeVelocity == "17500"){
@@ -79,15 +80,35 @@ var space = function(){
 	
 }; 
 
-var handleData = function (json) { 
-	console.log(json);
+// JSON data function
+var handleData = function () { 
+	
+		for (var key in json1.Astronauts){
+			
+			for (var keyData in json1.Astronauts[key]){
+				console.log(json1.Astronauts[key][keyData])
+			}
+		}
 };
 
+var rocketSepration = function (){
+  	var numberOfRockets = rocketTypes.length
+  	console.log("There are " + numberOfRockets + " rockets that have to seperate during launch.")
+
+  	for(var i = 0; i< numberOfRockets; i++){
+	  	
+	  	if (rocketTypes[i] === "Solid Rocket Booster" || rocketTypes[i] === "Main Rocket" || rocketTypes[i] === "Ion Rocket"){
+	  	
+	  	 	console.log(rocketTypes[i]+ " separation complete");
+	  	};
+	};
+};
 
 
 //Main Code
 console.log ("The launch of the Aries 3 rocket is today. The year is "+ launchYear);
 
+console.log ("The mission has 4 Astronauts")
 handleData(json1);
 
 console.log ("To estimate fuel cost we need to know if its windy outside");
@@ -100,7 +121,7 @@ console.log ("Fuel has been adjusted to match current wind conditions launch wil
 
 var launchTime = confirm("Default count down is 5 seconds. Ok to Confirm Cancel to extend time to 10 seconds. ");
 
-var liftOff = blastOff();
+var liftOff = blastOff(true);
 	if (liftOff === true) {
 		console.log ("Blast off!!");
 	} else { console.log ("Launch Canceled");
@@ -111,17 +132,12 @@ console.log ("The altitude starts rising");
 
 console.log ("As soon as the rocket reaches 40000 feet the booster rockets will fall off."); 
 
-var finalaltitude = altitude();
+var finalaltitude = altitude(10000);
 console.log ("The current altitude is " + finalaltitude);
 
-console.log ("Booster rocket seperation complete.");
+rocketSepration()
 
-var orbitAchieved = space();
+console.log ("All Rocket seperation complete.");
+
+var orbitAchieved = space("17500", "To achieve orbit");
 console.log (orbitAchieved);
-
-
-
-
-
-
-
